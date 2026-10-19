@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Мерчант Хаб</string>
+    <string name="btn_next">Далі</string>
+    <string name="btn_skip">Пропустити</string>
+    <string name="btn_back">Назад</string>
+    <string name="btn_get_started">Почати роботу</string>
+
+    <string name="slide1_title">Ваш магазин у кишені</string>
+    <string name="slide1_desc">Відстежуйте продажі в реальному часі, живі сесії покупців та стан магазину з будь-якої точки світу.</string>
+    <string name="slide1_letter">К</string>
+    <string name="slide1_store_name">Київський флагман</string>
+    <string name="slide1_synced">СИНХРОНІЗОВАНО</string>
+    <string name="slide1_live_store">Магазин онлайн • Київ</string>
+    <string name="slide1_todays_revenue">ВИРУЧКА ЗА СЬОГОДНІ</string>
+    <string name="slide1_revenue_growth" formatted="false">+18.4%</string>
+    <string name="slide1_velocity">Швидкість продажів</string>
+    <string name="slide1_peak">Пік: 11:20</string>
+    <string name="slide1_now">Зараз</string>
+    <string name="slide1_orders">Замовлення</string>
+    <string name="slide1_this_hr">+12 за год</string>
+    <string name="slide1_avg_basket">Сер. чек</string>
+    <string name="slide1_vs_avg">проти ₴ 510 сер.</string>
+    <string name="slide1_sales_channels">Канали продажу</string>
+    <string name="slide1_today">Сьогодні</string>
+    <string name="slide1_new_orders_badge">3 нових</string>
+
+    <string name="slide2_title">Миттєва обробка замовлень</string>
+    <string name="slide2_desc">Фулфілмент в один дотик, автоматичні сповіщення покупців та швидка інтеграція з кур\'єрськими службами.</string>
+    <string name="slide2_auto_sync">АВТОСИНХРОНІЗАЦІЯ АКТИВНА</string>
+    <string name="slide2_dc">Київ Склад #01</string>
+    <string name="slide2_time_2m">2 хв тому</string>
+    <string name="slide2_paid_badge">ОПЛАЧЕНО</string>
+    <string name="slide2_pending_status">В обробці</string>
+    <string name="slide2_confirmed_status">Підтверджено</string>
+    <string name="slide2_step_placed">Розміщено</string>
+    <string name="slide2_step_confirmed">Підтверджено</string>
+    <string name="slide2_step_packed">Спаковано</string>
+    <string name="slide2_step_shipped">Відправлено</string>
+    <string name="slide2_customer_name">Олена Шевченко</string>
+    <string name="slide2_space_gray_qty">Space Gray • К-сть 1</string>
+    <string name="slide2_print_label">Друк ТТН</string>
+    <string name="slide2_free_delivery">✓ Безкоштовна доставка</string>
+    <string name="slide2_total_label">Всього: </string>
+
+    <string name="slide3_title">Фіксація цін та каталог</string>
+    <string name="slide3_desc">Захист маржі від курсових коливань та безшовна синхронізація залишків на всіх каналах продажу.</string>
+    <string name="slide3_products_count">1,284 товари</string>
+    <string name="slide3_in_stock">В наявності (38 шт)</string>
+    <string name="slide3_category">Кавове обладнання / Бариста</string>
+    <string name="slide3_locked_snapshot">Фіксація ціни</string>
+    <string name="slide3_margin" formatted="false">+42.8% Маржа</string>
+    <string name="slide3_locked_rate">≈ $78.50 USD за курсом 41.40 UAH</string>
+    <string name="slide3_cost_price_label">Собівартість: </string>
+    <string name="slide3_price_history_label">Історія ціни • 30 днів</string>
+    <string name="slide3_channels_row">Сайт, Instagram та Rozetka</string>
+
+    <string name="slide4_title">Клієнтська база та аналітика</string>
+    <string name="slide4_desc">Будуйте тривалу лояльність покупців завдяки повним 360° профілям клієнтів та прогнозній аналітиці.</string>
+    <string name="slide4_customer_360">Клієнт 360°</string>
+    <string name="slide4_updated_now">Оновлено щойно</string>
+    <string name="slide4_customer_active">Активна • Київ, UA</string>
+    <string name="slide4_vip_tier">VIP Рівень</string>
+    <string name="slide4_phone">Телефон</string>
+    <string name="slide4_total_orders">Усього замовлень</string>
+    <string name="slide4_orders_count">19 зам.</string>
+    <string name="slide4_avg_check">Сер. чек ₴ 7,837</string>
+    <string name="slide4_ltv">Пожиттєва цінність (LTV)</string>
+    <string name="slide4_ltv_since">з березня 2024</string>
+    <string name="slide4_repeat_orders">Повторні замовлення</string>
+    <string name="slide4_repeat_high" formatted="false">94% Високий</string>
+    <string name="slide4_recent_order">Останнє замовлення • 2 хв тому</string>
+    <string name="slide4_confirmed_badge">ПІДТВЕРДЖЕНО</string>
+    <string name="slide4_cohort_rank">Рейтинг когорти</string>
+    <string name="slide4_floating_pill">+3 нових цього тижня</string>
+
+    <string name="home_title">Головний екран</string>
+    <string name="home_in_progress">Основний функціонал у процесі розробки</string>
+    <string name="home_btn_reset">Повернутися до онбордингу</string>
+</resources>

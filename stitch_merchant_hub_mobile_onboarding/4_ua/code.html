@@ -1,0 +1,220 @@
+<!DOCTYPE html><html lang="uk"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>Merchant Hub - Клієнтська база та аналітика</title>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Phosphor Icons for precise interface iconography -->
+<script src="https://unpkg.com/@phosphor-icons/web"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/thin/style.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/light/style.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/bold/style.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/duotone/style.css">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#EEF2FF',
+              100: '#E0E7FF',
+              500: '#6366F1',
+              600: '#4F46E5',
+              700: '#4338CA',
+            }
+          },
+          boxShadow: {
+            'card': '0 20px 40px -15px rgba(79, 70, 229, 0.08), 0 0 1px 1px rgba(0, 0, 0, 0.04)',
+            'btn': '0 12px 24px -6px rgba(79, 70, 229, 0.45)',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-scroll-and-resets">
+    /* iOS smooth rendering resets */
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      touch-action: manipulation;
+    }
+    /* Hide scrollbars */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-[#F8FAFC] text-slate-900 font-sans min-h-screen flex flex-col justify-between items-center selection:bg-brand-500 selection:text-white">
+<!-- BEGIN: TopBar -->
+<header class="w-full max-w-md pt-5 px-5 flex items-center justify-between z-20" data-purpose="navigation-header">
+<div class="flex items-center gap-3">
+<!-- App Brand Icon -->
+<div class="w-9 h-9 rounded-2xl bg-brand-600 flex items-center justify-center text-white font-bold text-lg shadow-sm">
+        M
+      </div>
+<!-- Language Switcher Pill -->
+<div class="flex items-center bg-slate-100 p-0.5 rounded-full border border-slate-200/60 text-xs font-semibold">
+<button class="bg-brand-600 text-white px-2.5 py-1 rounded-full transition-all">UA</button>
+<button class="text-slate-500 px-2 py-1 rounded-full hover:text-slate-800 transition-all">EN</button>
+</div>
+</div>
+<!-- Title / Brand name -->
+<h1 class="text-slate-900 font-bold text-[17px] tracking-tight">Merchant Hub</h1>
+<!-- Skip action button -->
+<button class="text-sm font-semibold text-slate-400 hover:text-slate-600 transition-colors">
+      Пропустити
+    </button>
+</header>
+<!-- END: TopBar -->
+<!-- BEGIN: MainContent -->
+<main class="w-full max-w-md px-4 flex flex-col items-center flex-1 justify-center pt-2 pb-4">
+<!-- Outer Card Shell with soft blue backdrop styling -->
+<div class="relative w-full rounded-[32px] bg-gradient-to-b from-[#EEF2FF] to-[#E0E7FF]/60 p-2.5 shadow-sm overflow-hidden" data-purpose="preview-card-container">
+<!-- Inner White Card Panel -->
+<div class="bg-white rounded-[26px] p-4 shadow-card border border-white flex flex-col gap-3.5 relative overflow-hidden">
+<!-- Header row of the preview card -->
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 bg-[#EEF2FF] text-brand-600 px-2.5 py-1 rounded-full text-[11px] font-bold tracking-wide">
+<i class="ph ph-user text-xs"></i>
+<span class="">Клієнт 360°</span>
+</div>
+<div class="flex items-center gap-1.5 text-[11px] font-medium text-emerald-600">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="">Оновлено щойно</span>
+</div>
+</div>
+<!-- Customer Identity Info -->
+<div class="flex items-center justify-between pt-0.5">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-full bg-brand-600 flex items-center justify-center text-white font-bold text-sm tracking-wider shadow-sm">
+              OS
+            </div>
+<div>
+<h2 class="text-slate-900 font-bold text-base leading-tight">Олена Шевченко</h2>
+<p class="text-slate-500 text-xs flex items-center gap-1 mt-0.5 font-medium">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+<span class="">Активна • Київ, UA</span>
+</p>
+</div>
+</div>
+<!-- VIP Status Badge -->
+<div class="bg-gradient-to-r from-amber-50 to-amber-100/90 border border-amber-200/60 rounded-full px-3 py-1.5 flex items-center gap-1.5 shadow-xs"><span class="text-amber-500 text-xs font-bold leading-none">★</span><div class="text-left"><span class="block text-[9px] font-extrabold uppercase text-amber-700 tracking-wider leading-none">VIP</span><span class="block text-[10px] font-bold text-amber-950 leading-tight">Рівень</span></div></div>
+</div>
+<!-- Customer Contact Row -->
+<div class="bg-slate-50/70 border border-slate-100 rounded-xl p-2.5 flex flex-col gap-1.5 text-xs">
+<div class="flex items-center justify-between text-slate-500">
+<span class="flex items-center gap-1.5 text-[11px]">
+<i class="ph ph-phone text-slate-400 text-xs"></i> Телефон
+            </span>
+<span class="font-mono font-medium text-slate-800 text-[11px]">+380 67 ••• •• 94</span>
+</div>
+<div class="flex items-center justify-between text-slate-500">
+<span class="flex items-center gap-1.5 text-[11px]">
+<i class="ph ph-envelope text-slate-400 text-xs"></i> Email
+            </span>
+<span class="font-mono text-slate-800 text-[11px]">o.shevchenko@example.com</span>
+</div>
+</div>
+<!-- 2-Column KPI Stats -->
+<div class="grid grid-cols-2 gap-2.5">
+<!-- Total Orders Tile -->
+<div class="bg-slate-50/80 rounded-2xl p-3 border border-slate-100/80 relative">
+<i class="ph ph-shopping-bag absolute top-3 right-3 text-brand-500 text-sm"></i>
+<span class="text-[11px] font-medium text-slate-500 block">Усього замовлень</span>
+<div class="mt-1">
+<span class="font-mono text-base font-extrabold text-slate-900">19</span>
+<span class="text-xs font-semibold text-slate-700 ml-0.5">замовлень</span>
+</div>
+<span class="text-[10px] text-slate-400 font-medium block mt-1">Сер. чек <span class="font-mono text-slate-600">₴ 7,837</span></span>
+</div>
+<!-- Lifetime Value Tile -->
+<div class="bg-emerald-50 border border-emerald-200/50 rounded-2xl p-3 relative"><i class="ph ph-trend-up absolute top-3 right-3 text-emerald-600 text-sm"></i><span class="text-[11px] font-semibold text-emerald-700 block">Пожиттєва цінність <span class="text-[9px]">(LTV)</span></span><div class="mt-1 font-mono text-base font-extrabold text-emerald-700">₴ 148,900</div><span class="text-[10px] text-emerald-600 font-medium block mt-1">з березня 2024</span></div>
+</div>
+<!-- Repeat Orders Progress -->
+<div class="bg-slate-50/60 rounded-xl p-2.5 border border-slate-100 flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-xs">
+<span class="flex items-center gap-1.5 font-semibold text-slate-700 text-[11px]">
+<i class="ph ph-shield-check text-emerald-500 text-sm"></i> Повторні замовлення
+            </span>
+<span class="text-emerald-700 font-bold text-[11px]">94% <span class="text-emerald-600 font-medium">Високий</span></span>
+</div>
+<!-- Progress bar track -->
+<div class="w-full bg-slate-200/80 rounded-full h-1.5 overflow-hidden">
+<div class="bg-emerald-500 h-2 rounded-full" style="width: 94%;"></div>
+</div>
+</div>
+<!-- Last Order Row -->
+<div class="flex items-center justify-between py-1 px-1 border-t border-slate-100">
+<div>
+<div class="flex items-center gap-1 text-[10px] text-slate-400 font-medium">
+<i class="ph ph-clock text-slate-400 text-[11px]"></i>
+<span class="">Останнє замовлення • 2 хв тому</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5">
+<span class="font-mono font-bold text-xs text-slate-800">#ORD-2026-849</span>
+</div>
+</div>
+<div class="text-right">
+<span class="inline-block bg-emerald-50 text-emerald-700 border border-emerald-200/50 text-[9px] font-extrabold px-1.5 py-0.5 rounded tracking-wider uppercase">
+              Підтверджено
+            </span>
+<div class="font-mono text-xs font-bold text-slate-900 mt-0.5">
+              ₴ 22,499.00
+            </div>
+</div>
+</div>
+<!-- Cohort Rank Bottom Row -->
+<div class="flex items-center justify-between bg-brand-50/50 rounded-xl px-2.5 py-1.5 border border-brand-100/50">
+<div class="flex items-center gap-1.5 text-brand-700 font-semibold text-[11px]">
+<i class="ph ph-chart-line-up text-xs"></i>
+<span class="">Рейтинг у когорті</span>
+</div>
+<div class="bg-brand-100/70 text-brand-700 font-mono text-[10px] font-bold px-2 py-0.5 rounded-full">
+            Топ 1.2%
+          </div>
+</div>
+</div>
+<!-- Floating Badge Over Bottom Border -->
+<div class="absolute -bottom-1 left-1/2 -translate-x-1/2 z-10">
+<div class="bg-brand-700 text-white shadow-lg shadow-brand-500/30 px-3.5 py-1.5 rounded-full flex items-center gap-1.5 text-[11px] font-bold tracking-tight border border-white/20 whitespace-nowrap"><i class="ph ph-users-three text-xs text-white"></i><span class="text-white">+3 нових цього тижня</span></div>
+</div>
+</div>
+<!-- Screen Narrative Description -->
+<div class="text-center mt-7 px-3" data-purpose="onboarding-copy">
+<h2 class="text-2xl font-extrabold text-slate-950 tracking-tight leading-tight">
+        Клієнтська база та аналітика
+      </h2>
+<p class="text-slate-500 text-sm font-normal mt-2 leading-relaxed">
+        Будуйте тривалу лояльність покупців завдяки повним 360° профілям клієнтів та прогнозній аналітиці.
+      </p>
+</div>
+<!-- Pager Dots (Screen 4 of 4 active) -->
+<div class="flex items-center justify-center gap-2 mt-5" data-purpose="pagination-dots">
+<span class="w-2 h-2 rounded-full bg-slate-300"></span>
+<span class="w-2 h-2 rounded-full bg-slate-300"></span>
+<span class="w-2 h-2 rounded-full bg-slate-300"></span>
+<!-- Active elongated indicator -->
+<span class="w-6 h-2 rounded-full bg-brand-600 transition-all duration-300"></span>
+</div>
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: BottomActions -->
+<footer class="w-full max-w-md px-5 pb-8 flex flex-col items-center gap-3.5" data-purpose="bottom-controls">
+<!-- Primary CTA Button -->
+<button class="w-full bg-brand-600 hover:bg-brand-700 active:scale-[0.98] transition-all text-white font-bold text-base py-3.5 px-6 rounded-2xl flex items-center justify-center gap-2 shadow-btn" type="button">
+<span class="">Почати роботу</span>
+<i class="ph-bold ph-arrow-right text-lg"></i>
+</button>
+<!-- Secondary Back Link -->
+<button class="text-slate-500 hover:text-slate-800 text-sm font-semibold tracking-tight flex items-center justify-center gap-1 transition-colors py-1" type="button">
+<span class="">← Назад</span>
+</button>
+</footer>
+<!-- END: BottomActions -->
+
+
+</body></html>

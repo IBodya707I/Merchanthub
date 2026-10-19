@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Merchant Hub</string>
+    <string name="btn_next">Next</string>
+    <string name="btn_skip">Skip</string>
+    <string name="btn_back">Back</string>
+    <string name="btn_get_started">Get Started</string>
+
+    <string name="slide1_title">Your Store in Your Pocket</string>
+    <string name="slide1_desc">Track real-time sales, live visitor sessions, and store health from anywhere in the world.</string>
+    <string name="slide1_letter">K</string>
+    <string name="slide1_store_name">Kyiv Flagship Store</string>
+    <string name="slide1_synced">SYNCED</string>
+    <string name="slide1_live_store">Live Store • Kyiv</string>
+    <string name="slide1_todays_revenue">TODAY\'S REVENUE</string>
+    <string name="slide1_revenue_growth" formatted="false">+18.4%</string>
+    <string name="slide1_velocity">Real-time Velocity</string>
+    <string name="slide1_peak">Peak: 11:20</string>
+    <string name="slide1_now">Now</string>
+    <string name="slide1_orders">Orders</string>
+    <string name="slide1_this_hr">+12 this hr</string>
+    <string name="slide1_avg_basket">Avg. Basket</string>
+    <string name="slide1_vs_avg">vs ₴ 510 avg.</string>
+    <string name="slide1_sales_channels">Sales Channels</string>
+    <string name="slide1_today">Today</string>
+    <string name="slide1_new_orders_badge">3 new</string>
+
+    <string name="slide2_title">Instant Order Processing</string>
+    <string name="slide2_desc">Update order statuses with a single tap, log status reasons, and view complete transaction histories.</string>
+    <string name="slide2_auto_sync">AUTO-SYNC ACTIVE</string>
+    <string name="slide2_dc">Kyiv DC #01</string>
+    <string name="slide2_time_2m">2 min ago</string>
+    <string name="slide2_paid_badge">PAID</string>
+    <string name="slide2_pending_status">Pending</string>
+    <string name="slide2_confirmed_status">Confirmed</string>
+    <string name="slide2_step_placed">Placed</string>
+    <string name="slide2_step_confirmed">Confirmed</string>
+    <string name="slide2_step_packed">Packed</string>
+    <string name="slide2_step_shipped">Shipped</string>
+    <string name="slide2_customer_name">Olena Shevchenko</string>
+    <string name="slide2_space_gray_qty">Space Gray • Qty 1</string>
+    <string name="slide2_print_label">Print Label</string>
+    <string name="slide2_free_delivery">✓ Free delivery</string>
+    <string name="slide2_total_label">Total: </string>
+
+    <string name="slide3_title">Price Snapshot &amp; Catalog</string>
+    <string name="slide3_desc">Lock prices against exchange volatility and sync inventory seamlessly across channels.</string>
+    <string name="slide3_products_count">1,284 products</string>
+    <string name="slide3_in_stock">In Stock (38 units)</string>
+    <string name="slide3_category">Coffee Gear / Barista</string>
+    <string name="slide3_locked_snapshot">Locked Price Snapshot</string>
+    <string name="slide3_margin" formatted="false">+42.8% Margin</string>
+    <string name="slide3_locked_rate">≈ $78.50 USD locked at rate 41.40 UAH</string>
+    <string name="slide3_cost_price_label">Cost price: </string>
+    <string name="slide3_price_history_label">Price history • 30 days</string>
+    <string name="slide3_channels_row">Web, Instagram &amp; Rozetka</string>
+
+    <string name="slide4_title">Customer Base &amp; Analytics</string>
+    <string name="slide4_desc">Build lasting customer loyalty with comprehensive 360° profiles and predictive purchase analytics.</string>
+    <string name="slide4_customer_360">Customer 360°</string>
+    <string name="slide4_updated_now">Updated just now</string>
+    <string name="slide4_customer_active">Active • Kyiv, UA</string>
+    <string name="slide4_vip_tier">VIP Tier</string>
+    <string name="slide4_phone">Phone</string>
+    <string name="slide4_total_orders">Total Orders</string>
+    <string name="slide4_orders_count">19 orders</string>
+    <string name="slide4_avg_check">Avg. ₴ 7,837</string>
+    <string name="slide4_ltv">Lifetime Value (LTV)</string>
+    <string name="slide4_ltv_since">since Mar 2024</string>
+    <string name="slide4_repeat_orders">Repeat Orders</string>
+    <string name="slide4_repeat_high" formatted="false">94% High</string>
+    <string name="slide4_recent_order">Recent order • 2 min ago</string>
+    <string name="slide4_confirmed_badge">CONFIRMED</string>
+    <string name="slide4_cohort_rank">Recent Cohort Rank</string>
+    <string name="slide4_floating_pill">+3 new this week</string>
+
+    <string name="home_title">Main Screen</string>
+    <string name="home_in_progress">Main functionality in progress</string>
+    <string name="home_btn_reset">Return to Onboarding</string>
+</resources>

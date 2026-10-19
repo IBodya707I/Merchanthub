@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>Merchant Hub - Instant Order Processing</title>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#EEF2FF',
+              100: '#E0E7FF',
+              500: '#6366F1',
+              600: '#4F46E5',
+              700: '#4338CA',
+            }
+          },
+          boxShadow: {
+            'card': '0 10px 25px -5px rgba(79, 70, 229, 0.08), 0 8px 10px -6px rgba(79, 70, 229, 0.04)',
+            'subtle': '0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px 0 rgba(0, 0, 0, 0.02)',
+            'btn': '0 8px 20px -4px rgba(79, 70, 229, 0.45)',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-styling">
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    /* Hide scrollbars for crisp native app experience */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+<body class="bg-[#F8FAFC] text-slate-800 font-sans antialiased flex justify-center min-h-screen">
+<!-- Mobile Viewport Container -->
+<main class="w-full max-w-[430px] min-h-screen flex flex-col justify-between bg-white shadow-2xl relative overflow-hidden pb-8">
+<!-- BEGIN: TopBar -->
+<header class="w-full pt-4 pb-3 px-5 flex items-center justify-between z-20 bg-white">
+<!-- Left side: Logo & Language Toggle -->
+<div class="flex items-center space-x-3">
+<!-- Logo Avatar -->
+<div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-[#4338CA] to-[#4F46E5] flex items-center justify-center text-white font-bold text-base shadow-sm" data-purpose="app-logo">
+          M
+        </div>
+<!-- Language Switcher Pill -->
+<div class="flex items-center bg-slate-100/90 p-0.5 rounded-full text-xs font-semibold" data-purpose="language-toggle">
+<button class="px-2.5 py-1 text-slate-500 rounded-full hover:text-slate-700 transition" type="button">UA</button>
+<button class="px-2.5 py-1 bg-[#4F46E5] text-white rounded-full shadow-sm" type="button">EN</button>
+</div>
+<!-- App Brand Title -->
+<span class="text-[17px] font-bold text-slate-900 tracking-tight ml-1">Merchant Hub</span>
+</div>
+<!-- Skip Button -->
+<a class="text-sm font-semibold text-slate-400 hover:text-slate-600 transition" data-purpose="skip-link" href="#">
+        Skip
+      </a>
+</header>
+<!-- END: TopBar -->
+<!-- BEGIN: IllustrationPreviewCard -->
+<section aria-label="Feature Preview Illustration" class="px-4 pt-1 pb-2 flex-1 flex flex-col justify-center">
+<!-- Outer Lavender Tint Container -->
+<div class="w-full bg-[#EEF2FF]/70 rounded-[26px] p-3 border border-indigo-100/60 shadow-sm relative">
+<!-- Top Status Sub-bar -->
+<div class="flex items-center justify-between px-1 mb-2.5 text-[11px] font-semibold text-slate-500">
+<div class="flex items-center bg-white px-2.5 py-1 rounded-full shadow-xs border border-indigo-50">
+<span class="w-2 h-2 rounded-full bg-emerald-500 mr-1.5 animate-pulse"></span>
+<span class="text-slate-700 font-mono tracking-tight text-[10px]">AUTO-SYNC ACTIVE</span>
+</div>
+<span class="font-mono text-slate-500 tracking-wider text-[11px]">Kyiv DC #01</span>
+</div>
+<!-- Inner Main Order Card -->
+<div class="bg-white rounded-2xl p-3.5 shadow-card border border-slate-100 space-y-3" data-purpose="order-detail-card">
+<!-- Order Header: ID, Time, Paid Badge -->
+<div class="flex items-start justify-between">
+<div>
+<h2 class="font-bold text-slate-900 font-mono text-[15px] tracking-tight">#ORD-2026-849</h2>
+<div class="flex items-center text-slate-400 text-xs mt-0.5 space-x-1 font-medium">
+<svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="">2 mins ago</span>
+</div>
+</div>
+<!-- Paid Badge -->
+<span class="inline-flex items-center space-x-1 px-2.5 py-1 rounded-md bg-indigo-100 text-[#4F46E5] text-[11px] font-mono font-bold uppercase tracking-wider border border-indigo-200 shadow-2xs">
+<svg class="w-3 h-3 text-[#4F46E5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+<span class="">PAID</span>
+</span>
+</div>
+<!-- Status Flow Visual Pill -->
+<div class="bg-slate-50/80 rounded-xl p-1.5 flex items-center justify-center space-x-3 border border-slate-100">
+<!-- Pending State -->
+<div class="flex items-center space-x-1.5 px-3 py-1 rounded-lg border border-amber-300 bg-amber-50/60 text-amber-700 text-xs font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+<span class="">Pending</span>
+</div>
+<!-- Transition Arrow -->
+<svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+<!-- Confirmed State (Active Transition Goal) -->
+<div class="flex items-center space-x-1.5 px-3 py-1 rounded-lg border border-indigo-200 bg-[#EEF2FF] text-[#4F46E5] text-xs font-bold shadow-xs">
+<svg class="w-3.5 h-3.5 text-[#4F46E5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+<span class="">Confirmed</span>
+</div>
+</div>
+<!-- Progress Step Tracker -->
+<div class="py-1 px-1 border border-slate-100 rounded-xl bg-slate-50/30">
+<div class="relative flex items-center justify-between">
+<!-- Connecting Line Behind Nodes -->
+<div class="absolute left-6 right-6 top-2 h-0.5 bg-slate-200 z-0">
+<div class="w-1/3 h-full bg-[#4F46E5]"></div>
+</div>
+<!-- Step 1: Placed -->
+<div class="flex flex-col items-center relative z-10 w-1/4">
+<div class="w-4 h-4 rounded-full bg-[#4F46E5] ring-2 ring-white"></div>
+<span class="text-[11px] font-semibold text-slate-800 mt-1">Placed</span>
+<span class="text-[9px] font-mono text-slate-400">13:37</span>
+</div>
+<!-- Step 2: Confirmed (Active) -->
+<div class="flex flex-col items-center relative z-10 w-1/4">
+<div class="w-4 h-4 rounded-full bg-[#4F46E5] ring-4 ring-indigo-200 flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-white"></div>
+</div>
+<span class="text-[11px] font-bold text-[#4F46E5] mt-1">Confirmed</span>
+<span class="text-[9px] font-mono font-medium text-[#4F46E5]">13:39</span>
+</div>
+<!-- Step 3: Packed -->
+<div class="flex flex-col items-center relative z-10 w-1/4">
+<div class="w-4 h-4 rounded-full bg-slate-300 ring-2 ring-white"></div>
+<span class="text-[11px] font-medium text-slate-400 mt-1">Packed</span>
+<span class="text-[9px] font-mono text-slate-300">—</span>
+</div>
+<!-- Step 4: Shipped -->
+<div class="flex flex-col items-center relative z-10 w-1/4">
+<div class="w-4 h-4 rounded-full bg-slate-300 ring-2 ring-white"></div>
+<span class="text-[11px] font-medium text-slate-400 mt-1">Shipped</span>
+<span class="text-[9px] font-mono text-slate-300">—</span>
+</div>
+</div>
+</div>
+<!-- Customer Info Row -->
+<div class="flex items-center p-2 rounded-xl border border-slate-100 bg-white shadow-subtle">
+<div class="w-8 h-8 rounded-full bg-indigo-100 text-[#4F46E5] flex items-center justify-center text-xs font-bold mr-2.5 shrink-0">
+              OS
+            </div>
+<div class="leading-tight">
+<div class="text-[13px] font-bold text-slate-800">Olena Shevchenko</div>
+<div class="text-[11px] text-slate-400 flex items-center space-x-1 mt-0.5">
+<span class="">Kyiv</span>
+<span class="">•</span>
+<span class="">Visa</span>
+<span class="tracking-widest text-[9px]">••••</span>
+<span class="font-mono text-[10px]">4242</span>
+</div>
+</div>
+</div>
+<!-- Product Item Row -->
+<div class="flex items-center justify-between p-2 rounded-xl border border-slate-100 bg-white shadow-subtle">
+<div class="flex items-center space-x-2.5">
+<div class="w-9 h-9 rounded-lg bg-slate-50 border border-slate-200/60 flex items-center justify-center text-slate-600 shrink-0">
+<svg class="w-5 h-5 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 100-6 3 3 0 000 6z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+<path d="M3 11a9 9 0 0118 0v4a3 3 0 01-3 3h-1a2 2 0 01-2-2v-4a2 2 0 012-2h2m-16 8h1a2 2 0 002-2v-4a2 2 0 00-2-2H4a3 3 0 00-3 3v1a3 3 0 003 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path>
+</svg>
+</div>
+<div>
+<div class="text-[13px] font-bold text-slate-800">Studio Headphones</div>
+<div class="text-[11px] text-slate-400">Space Gray • Qty 1</div>
+</div>
+</div>
+<div class="text-right">
+<div class="text-[13px] font-bold text-slate-900 font-mono">₴ 22,499.00</div>
+<span class="inline-block px-1.5 py-0.2 bg-slate-100 text-slate-500 text-[9px] font-mono font-semibold rounded">UAH</span>
+</div>
+</div>
+<!-- Courier Integration Row -->
+<div class="flex items-center justify-between p-2 rounded-xl border border-slate-100 bg-white shadow-subtle">
+<div class="flex items-center space-x-2.5">
+<div class="w-8 h-8 rounded-lg bg-[#E31E24] flex items-center justify-center text-white font-extrabold text-xs shrink-0 tracking-tighter">
+                NP
+              </div>
+<div>
+<div class="text-[12px] font-bold text-slate-800">Nova Poshta Express</div>
+<div class="text-[10px] text-slate-400 font-mono tracking-tight">TTH: 2045 0839 1192 84</div>
+</div>
+</div>
+<!-- Print Label Button -->
+<button class="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-[#4F46E5] text-white text-xs font-semibold hover:bg-[#4338CA] active:scale-95 transition shadow-sm" type="button">
+<svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="">Print Label</span>
+</button>
+</div>
+<!-- Order Summary Footer -->
+<div class="flex items-center justify-between pt-1 border-t border-slate-100/80 text-xs">
+<div class="flex items-center text-emerald-600 font-semibold space-x-1">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+<span class="">Free delivery</span>
+</div>
+<div class="font-semibold text-slate-700">
+              Total: <span class="font-bold text-slate-900 font-mono ml-1">₴ 22,499.00</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: IllustrationPreviewCard -->
+<!-- BEGIN: OnboardingContentArea -->
+<section aria-label="Onboarding Details" class="px-6 pt-3 flex flex-col items-center text-center">
+<!-- Feature Headline -->
+<h1 class="text-[25px] font-extrabold text-slate-900 tracking-tight leading-tight mb-2.5">
+        Instant Order Processing
+      </h1>
+<!-- Supporting Body Description -->
+<p class="text-[14px] text-slate-500 leading-relaxed max-w-[320px]">
+        One-tap fulfillment, automated buyer notifications, and lightning-fast courier integrations.
+      </p>
+<!-- 4-Dot Pager Indicator -->
+<nav aria-label="Step progress" class="flex items-center justify-center space-x-2 my-6">
+<!-- Dot 1 -->
+<span class="w-2 h-2 rounded-full bg-slate-300"></span>
+<!-- Dot 2 (Active, Elongated #4F46E5) -->
+<span aria-current="step" class="w-7 h-2 rounded-full bg-[#4F46E5]"></span>
+<!-- Dot 3 -->
+<span class="w-2 h-2 rounded-full bg-slate-300"></span>
+<!-- Dot 4 -->
+<span class="w-2 h-2 rounded-full bg-slate-300"></span>
+</nav>
+</section>
+<!-- END: OnboardingContentArea -->
+<!-- BEGIN: NavigationActions -->
+<footer class="px-6 space-y-3 flex flex-col items-center">
+<!-- Primary Action Button: Next -->
+<button class="w-full h-[52px] rounded-2xl bg-[#4F46E5] text-white font-bold text-base flex items-center justify-center space-x-1 shadow-btn hover:bg-[#4338CA] active:scale-[0.98] transition-all" data-purpose="primary-action-btn" type="button">
+<span class="">Next</span>
+<span class="text-lg">→</span>
+</button>
+<!-- Secondary Action Link: Back -->
+<a class="inline-block py-1 text-sm font-semibold text-slate-500 hover:text-slate-800 transition" data-purpose="secondary-back-link" href="#">
+        ← Back
+      </a>
+</footer>
+<!-- END: NavigationActions -->
+</main>
+
+
+</body></html>
